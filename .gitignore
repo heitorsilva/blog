@@ -21,6 +21,7 @@ logs
 lerna-debug.log*
 
 # Misc
+.cache
 .DS_*
 *.pem
 *.sublime*
@@ -48,6 +49,7 @@ sketch
 
 # Production
 /build
+/public/build
 
 # Runtime data
 pids
