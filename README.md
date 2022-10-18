@@ -16,7 +16,7 @@ This starts your app in development mode, rebuilding assets on file changes.
 ### Docker
 
 ```sh
-docker run -it --rm -v $(pwd):/blog -w /blog -p 3000:3000 node:lts-alpine sh
+docker run -it --rm -v $(pwd):/blog -w /blog -p 3000:3000 --name=Blog node:lts-alpine sh
 ```
 
 ## Deployment
