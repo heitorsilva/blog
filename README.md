@@ -1,4 +1,5 @@
 # blog
+
 My personal blog
 
 ## Development
@@ -16,8 +17,13 @@ This starts your app in development mode, rebuilding assets on file changes.
 ### Docker
 
 ```sh
-docker run -it --rm -v $(pwd):/blog -w /blog -p 3000:3000 --name=Blog node:lts-alpine sh
+docker run -it --rm -v $(pwd):/blog -w /blog -p 3000:3000 -p 8002:8002 --name=Blog node:lts-alpine yarn dev
 ```
+
+Port 3000 is the webserver  
+Port 8002 is for live reload
+
+> Put CHOKIDAR_USEPOLLING=true in .env to live reload within WSL2
 
 ## Deployment
 
