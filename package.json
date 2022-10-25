@@ -2,8 +2,11 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
+    "build": "yarn build:css && remix build",
+    "build:css": "tailwindcss -m -i app/styles/common.css -o app/styles/blog.css",
+    "clean": "rm -rf build/* && rm -rf public/build/*",
+    "dev": "concurrently \"yarn dev:css\" \"remix dev\"",
+    "dev:css": "tailwindcss -w -i app/styles/common.css -o app/styles/blog.css",
     "start": "remix-serve build"
   },
   "dependencies": {

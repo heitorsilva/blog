@@ -57,6 +57,9 @@ pids
 *.seed
 *.pid.lock
 
+# TailwindCSS build
+app/styles/blog.css
+
 # TypeScript cache
 *.tsbuildinfo
 

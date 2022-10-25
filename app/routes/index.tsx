@@ -1,5 +1,9 @@
+import Blog from "~/components/shared/Blog";
+
 export default function Index() {
   return (
-    <div></div>
+    <Blog>
+      Conteúdo
+    </Blog>
   );
 }
